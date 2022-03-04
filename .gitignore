@@ -22,5 +22,11 @@ package-lock.json
 *.out
 *.exe
 hs_err_pid*
+
+
 build.properties
 mvn.properties
+java/org/apache/catalina/startup/catalina.properties
+modules/jdbc-pool/bin
+modules/jdbc-pool/includes
+Servers/
