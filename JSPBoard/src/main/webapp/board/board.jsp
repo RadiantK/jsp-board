@@ -15,7 +15,7 @@
   <div id="wrap">
     <header class="head">
       <div class="logo">
-        <a href="index.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="board.jsp"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>

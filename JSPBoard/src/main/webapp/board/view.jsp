@@ -15,7 +15,7 @@
   <div id="wrap">
     <header>
       <div class="logo">
-        <a href="index.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="board.jsp"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>
@@ -74,7 +74,7 @@
           </div>
           
           <div class="bt_wrap">
-            <a href="index.jsp" class="on">목록</a>
+            <a href="board.jsp" class="on">목록</a>
             <a href="edit.jsp">수정</a>
           </div>
     

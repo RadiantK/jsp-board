@@ -15,7 +15,7 @@
   <div id="wrap">
     <header class="head">
       <div class="logo">
-        <a href="index.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="board.jsp"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>
@@ -40,7 +40,7 @@
           <input type="submit" value="회원가입">
         </form>
         <div class="actions">
-          <a href="index.jsp">취소</a>
+          <a href="board.jsp">취소</a>
         </div>
       </div>
     </section>
