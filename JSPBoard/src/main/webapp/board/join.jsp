@@ -15,7 +15,7 @@
   <div id="wrap">
     <header class="head">
       <div class="logo">
-        <a href="main.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>
@@ -32,15 +32,15 @@
         <h2>
           <strong>Welcome!</strong> 페이지에 오신것을 환영합니다.
         </h2>
-        <form action="loginAction.html" method="post">
-          <input type="text" placeholder="아이디" />
-          <input type="password" placeholder="비밀번호" />
-          <input type="text" placeholder="이름" />
-          <input type="email" placeholder="이메일" />
+        <form action="join" method="post">
+          <input type="text" name="userId" placeholder="아이디" />
+          <input type="password" name="password" placeholder="비밀번호" />
+          <input type="text" name="userName" placeholder="이름" />
+          <input type="email" name="email" placeholder="이메일" />
           <input type="submit" value="회원가입">
         </form>
         <div class="actions">
-          <a href="main.jsp">취소</a>
+          <a href="main">취소</a>
         </div>
       </div>
     </section>
