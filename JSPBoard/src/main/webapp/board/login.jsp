@@ -15,7 +15,7 @@
   <div id="wrap">
     <header class="head">
       <div class="logo">
-        <a href="main.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>
@@ -25,16 +25,6 @@
       </ul>
     </header>
 
-    <!-- 메인부분 -->
-    <!-- <section>
-      <div id="container">
-        <div id="idx_top">
-          <strong><span>직접 만드는 홈페이지</span></strong>
-          <p>홈페이지 만들기 연습입니다.</p>
-        </div>
-      </div>
-    </section> -->
-    
     <!-- 로그인 -->
     <section class='signin'>
       <h1>로그인</h1>
@@ -42,9 +32,9 @@
         <h2>
           <strong>Welcome!</strong> 페이지에 오신것을 환영합니다.
         </h2>
-        <form action="loginAction.html" method="post">
-          <input type="text" placeholder="아이디를 입력하세요.">
-          <input type="password" placeholder="비밀번호를 입력하세요.">
+        <form action="login" method="post">
+          <input type="text" name="userId" placeholder="아이디를 입력하세요.">
+          <input type="password" name="password" placeholder="비밀번호를 입력하세요.">
           <input type="submit" value="로그인">
           <p>
             * 비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니,<br/>
@@ -52,8 +42,8 @@
           </p>
         </form>
         <div class="actions">
-          <a href="join.jsp">회원가입</a>
-          <a href=main.jsp>취소</a>
+          <a href="join">회원가입</a>
+          <a href="main">취소</a>
         </div>
       </div>
     </section>
