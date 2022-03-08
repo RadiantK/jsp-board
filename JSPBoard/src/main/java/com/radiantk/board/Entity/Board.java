@@ -1,4 +1,4 @@
-package com.radiantk.board.dto;
+package com.radiantk.board.Entity;
 
 import java.util.Date;
 
