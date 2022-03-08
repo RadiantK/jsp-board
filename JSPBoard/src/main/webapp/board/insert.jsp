@@ -15,11 +15,6 @@
 </head>
 <body>
 
-	<c:if test="${empty sessionId}">
-		<%="<script>alert('로그인이 되어 있지 않습니다.')" %>
-		<%="location.href = 'main'</script>" %>
-   </c:if>
-
   <div id="wrap">
     <header>
       <div class="logo">
