@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DatabaseUtil {
 
-	// db¿¬µ¿
+	// dbì»¤ë„¥ì…˜
 	public static Connection getConnection() {
 		try {
 			String url = "jdbc:mysql://localhost/board";
