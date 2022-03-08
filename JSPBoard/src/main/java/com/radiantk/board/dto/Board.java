@@ -1,4 +1,4 @@
-package com.radiantk.board.entity;
+package com.radiantk.board.dto;
 
 import java.util.Date;
 
@@ -9,16 +9,18 @@ public class Board {
 	private Date regDate; // 등록일
 	private int hit; // 조회수
 	private String content; //  상세내용
+	private int available; // 공개 / 삭제
 	
 	public Board() {}
 
-	public Board(int bNo, String title, String writer, Date regDate, int hit, String content) {
+	public Board(int bNo, String title, String writer, Date regDate, int hit, String content, int available) {
 		this.bNo = bNo;
 		this.title = title;
 		this.writer = writer;
 		this.regDate = regDate;
 		this.hit = hit;
 		this.content = content;
+		this.available = available;
 	}
 
 
@@ -67,8 +69,16 @@ public class Board {
 		return content;
 	}
 
-	public void setContent(String conten) {
-		this.content = conten;
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public int getAvailable() {
+		return available;
+	}
+
+	public void setAvailable(int available) {
+		this.available = available;
 	};
 
 }
