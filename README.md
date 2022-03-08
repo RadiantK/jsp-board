@@ -37,13 +37,13 @@ CREATE TABLE USERS (
 );
 ```
 
-### 페이지 경로
+## 페이지 경로
 - 프로젝트 이름을 제외한 루트 경로로 사용
 - 프로젝트 우클릭 Properties => Web Project Settings => Context root을 / 로 설정
 
 <br/>
 
-### 게시판 사용법
+## 게시판 사용법
 1. 회원등록
    1. 회원가입
    1. 로그인
@@ -63,7 +63,7 @@ CREATE TABLE USERS (
 
 <br/>
 
-### 구성
+## 구성
 - JAVA src
 1. Controller : DAO를 통해 얻어온 DB를 통해서 GET,POST 요청 처리
 1. DAO : 데이터 베이스 접근 객체
@@ -78,7 +78,7 @@ CREATE TABLE USERS (
 
 <br/>
 
-### 사용한 외부 라이브러리
+## 사용한 외부 라이브러리
 - javax.servlet.jsp.jstl-1.2.1.jar
 - javax.servlet.jsp.jstl-app-1.2.1.jar
 - mysql-connector-java-8.0.27.jar
