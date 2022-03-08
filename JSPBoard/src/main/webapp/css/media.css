@@ -33,17 +33,15 @@
     text-indent: 0;
   }
 
+  .board_page span,
   .board_page a {
     width: 26px;
     height: 26px;
   }
 
+  .board_page span.bt,
   .board_page a.bt {
-    padding: 7px;
-  }
-
-  .board_page a.bt {
-    padding: 0;
+    padding: 0px;
   }
 
   .board_page a.num {
