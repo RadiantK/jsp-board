@@ -6,6 +6,8 @@
 - MySQL 8.27
 - tomcat 9.0
 
+<br/>
+
 ## MySQL 데이터베이스 생성
 - 데이터베이스와 사용자도 새로 생성을 해서 사용했습니다.<br/>
 
@@ -39,6 +41,7 @@ CREATE TABLE USERS (
 - 프로젝트 이름을 제외한 루트 경로로 사용
 - 프로젝트 우클릭 Properties => Web Project Settings => Context root을 / 로 설정
 
+<br/>
 
 ### 게시판 사용법
 1. 회원등록
@@ -58,6 +61,8 @@ CREATE TABLE USERS (
 3. 로그이웃
     1. 화면 상단의 로그아웃 메뉴를 사용
 
+<br/>
+
 ### 구성
 - JAVA src
 1. Controller : DAO를 통해 얻어온 DB를 통해서 GET,POST 요청 처리
@@ -70,6 +75,8 @@ CREATE TABLE USERS (
 1. board폴더 : JSP 구성 파일
 1. css폴더 : css 구성 파일
 1. images폴더 : 페이지 구성에 사용한 이미지 파일
+
+<br/>
 
 ### 사용한 외부 라이브러리
 - javax.servlet.jsp.jstl-1.2.1.jar
