@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +17,19 @@
   <div id="wrap">
     <header>
       <div class="logo">
-        <a href="main.jsp"><img src="/images/namhe.png" alt="로고" />
+        <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
         
       </div>
       <ul class="menu">
-        <li><a href="login.jsp">로그인</a></li>
-        <li><a href="join.jsp">회원가입</a></li>
+        <c:if test="${empty sessionId}">
+	        <li><a href="login">로그인</a></li>
+	        <li><a href="join">회원가입</a></li>
+        </c:if>
+        <c:if test="${not empty sessionId}">
+	        <li>로그인된 아이디: <a href="main" style="color:royalblue;">${sessionId}</a></li>
+	        <li><a href="logout">로그아웃</a></li>
+        </c:if>
       </ul>
     </header>
 
@@ -45,32 +53,33 @@
 
         <div class="board_write_wrap">
           <div class="board_write">
-            <div class="title">
-              <dl>
-                <dt>제목</dt>
-                <dd><input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다."/></dd>
-              </dl>
-            </div>
-            <div class="info">
-              <dl>
-                <dt>사용자</dt>
-                <dd><input type="text" placeholder="사용자 입력" value="이름"/></dd>
-              </dl>
-              <dl>
-                <dt>비밀번호</dt>
-                <dd><input type="password" placeholder="비밀번호 입력" /></dd>
-              </dl>
-            </div>
-            <div class="content">
-              <textarea placeholder="내용 입력">
-글의 내용이 들어가는 부분입니다.
-              </textarea>
-            </div>
+          	<form action="edit" method="post">
+	            <div class="title">
+	              <dl>
+	                <dt>제목</dt>
+	                <dd><input type="text" name="boardTitle" placeholder="제목 입력"/></dd>
+	              </dl>
+	            </div>
+	            <div class="info">
+	              <dl>
+	                <dt>사용자</dt>
+	                <dd><input type="text" name="writer" placeholder="사용자 입력" /></dd>
+	              </dl>
+	              <dl>
+	                <dt>비밀번호</dt>
+	                <dd><input type="password" name="boardPassword" placeholder="비밀번호 입력" /></dd>
+	              </dl>
+	            </div>
+	            <div class="content">
+	              <textarea placeholder="내용 입력" name="content">
+	              </textarea>
+	            </div>
+            </form>
           </div>
   
           <div class="bt_wrap">
-            <a href="view.jsp" class="on">수정</a>
-            <a href="view.jsp">취소</a>
+            <a href="view" class="on">수정</a>
+            <a href="view">취소</a>
           </div>
         </div>
       </div>
