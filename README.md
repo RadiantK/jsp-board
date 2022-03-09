@@ -66,10 +66,10 @@ CREATE TABLE USERS (
 ## 구성
 - JAVA src
 1. Controller : DAO를 통해 얻어온 DB를 통해서 GET,POST 요청 처리
-1. DAO : 데이터 베이스 접근 객체
-1. ENTITY : 데이터 베이스 속성값
-1. FILTER : 인코딩 필터(UTF-8지정)
-1. UTIL : DB에 연결객체를 따로 생성
+1. Dao : 데이터 베이스 접근 객체
+1. Entity : 데이터 베이스 속성값
+1. Filter : 인코딩 필터(UTF-8지정)
+1. Util : DB에 연결객체를 따로 생성
 
 - WEPAPP<br/>
 1. board폴더 : JSP 구성 파일
