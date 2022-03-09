@@ -19,8 +19,13 @@
       <div class="logo">
         <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
-        
       </div>
+      
+      <c:if test="${empty sessionId}">
+     	<%="<script>alert('로그인 후 사용 가능합니다.'); location.href = '/board/main'</script>" %>
+     	<% out.flush(); %>
+      </c:if>
+      
       <ul class="menu">
         <c:if test="${empty sessionId}">
 	        <li><a href="login">로그인</a></li>
@@ -52,35 +57,35 @@
         </div>
 
         <div class="board_write_wrap">
-          <div class="board_write">
-          	<form action="edit" method="post">
+          <form action="update" method="post">
+          	<div class="board_write">
 	            <div class="title">
 	              <dl>
 	                <dt>제목</dt>
-	                <dd><input type="text" name="boardTitle" placeholder="제목 입력"/></dd>
+	                <dd><input type="text" name="boardTitle" value="${board.title}" /></dd>
 	              </dl>
 	            </div>
 	            <div class="info">
 	              <dl>
-	                <dt>사용자</dt>
-	                <dd><input type="text" name="writer" placeholder="사용자 입력" /></dd>
+	                <dt>번호</dt>
+	                <dd><input type="text" name="boardNum" value="${board.bNo}" readonly /></dd>
 	              </dl>
 	              <dl>
-	                <dt>비밀번호</dt>
-	                <dd><input type="password" name="boardPassword" placeholder="비밀번호 입력" /></dd>
-	              </dl>
+	                <dt>사용자</dt>
+	                <dd><input type="text" name="writer" value="${sessionId}" readonly /></dd>
+	              </dl> 
 	            </div>
 	            <div class="content">
-	              <textarea placeholder="내용 입력" name="content">
-	              </textarea>
+	              <textarea  name="boardContent">${board.content}</textarea>
 	            </div>
-            </form>
-          </div>
-  
-          <div class="bt_wrap">
-            <a href="view" class="on">수정</a>
-            <a href="view">취소</a>
-          </div>
+          	</div>
+	  
+            <div class="bt_wrap">
+              <input class="on" type="submit" value="수정" />
+              <a href="view?no=${board.bNo}">취소</a>
+              <a href="delete?no=${board.bNo}">삭제</a>
+            </div>
+	      </form>
         </div>
       </div>
     </section>
