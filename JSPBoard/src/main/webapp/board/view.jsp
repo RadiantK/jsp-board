@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <title>JSP게시판</title>
+
 </head>
 <body>
   <div id="wrap">
@@ -19,8 +20,8 @@
       <div class="logo">
         <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
-        
       </div>
+      
       <ul class="menu">
         <c:if test="${empty sessionId}">
 	        <li><a href="login">로그인</a></li>
@@ -79,7 +80,13 @@
           
           <div class="bt_wrap">
             <a href="main" class="on">목록</a>
-            <a href="edit">수정</a>
+            <c:if test="${board.writer == sessionId}">
+            	<a href="update?no=${board.bNo}">수정</a>
+            	<a href="delete?no=${board.bNo}">삭제</a>
+            </c:if>
+            <%-- <c:if test="${board.writer != sessionId}">
+            	<span class="on" onclick="alert('자신의 게시물이 아닙니다.');">수정</span>
+            </c:if> --%>
           </div>
     
         </div>
