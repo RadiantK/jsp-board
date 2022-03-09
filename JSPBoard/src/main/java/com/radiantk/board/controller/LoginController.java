@@ -2,7 +2,6 @@ package com.radiantk.board.controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +19,13 @@ public class LoginController extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		request.getRequestDispatcher("/board/login.jsp").forward(request, response);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+
 		String loginId = null;
 		if(request.getSession().getAttribute("sessionId") != null) {
 			loginId = (String) request.getSession().getAttribute("sessionId");
@@ -28,15 +34,6 @@ public class LoginController extends HttpServlet{
 			System.out.println("이미 로그인 된 아이디 입니다.");
 			response.sendRedirect("/board/main");
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("/board/login.jsp");
-		rd.forward(request, response);
-	}
-	
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-
-		
 		
 		String userId_ = request.getParameter("userId");
 		String userId = "";
@@ -63,12 +60,12 @@ public class LoginController extends HttpServlet{
 
 		} 
 		else if(result == -1) {
-			System.out.println("데이터베이스 오류 입니다.");
+			System.out.println("아이디가 없습니다.");
 			response.sendRedirect("/board/login");
 
 		} 
 		else if(result == -2) {
-			System.out.println("비어있는 값이 있습니다..");
+			System.out.println("데이터베이스 오류 입니다..");
 			response.sendRedirect("/board/login");
 
 		}
