@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.radiantk.board.entity.User;
+import com.radiantk.board.Entity.User;
 import com.radiantk.board.util.DatabaseUtil;
 
 public class UserDao {
