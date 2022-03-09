@@ -18,7 +18,7 @@ public class LogOutController extends HttpServlet {
 			throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
-		// 로그인 세션 초기화
+		// 세션값 모두 제거
 		session.invalidate();
 		
 		response.sendRedirect("main");
