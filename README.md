@@ -1,7 +1,7 @@
 # JSP 게시판
 
-## 사용한 프로그램
-- JAVA (jdk 1.8)
+## 사용한 환경
+- JAVA
 - Eclipse IDE
 - MySQL 8.27
 - tomcat 9.0
