@@ -23,8 +23,6 @@ public class Board {
 		this.available = available;
 	}
 
-
-
 	public int getbNo() {
 		return bNo;
 	}

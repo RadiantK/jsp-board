@@ -19,8 +19,6 @@ public class User {
 		this.email = email;
 	}
 
-
-
 	public String getUserId() {
 		return userId;
 	}
