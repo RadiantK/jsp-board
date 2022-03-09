@@ -19,8 +19,13 @@
       <div class="logo">
         <a href="main"><img src="/images/namhe.png" alt="로고" />
           <span>RadiantK</span></a>  
-        
       </div>
+      
+      <c:if test="${not empty sessionId}">
+     	<%="<script>alert('이미 로그인 되었습니다.'); location.href = '/board/main'</script>" %>
+     	<% out.flush(); %>
+      </c:if>
+      
       <ul class="menu">
         <c:if test="${empty sessionId}">
 	        <li><a href="login">로그인</a></li>
