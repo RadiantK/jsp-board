@@ -40,9 +40,6 @@ public class BoardInsertController extends HttpServlet {
 		if(title_ == null || title_.equals("") || content_ == null || content_.equals("")) {
 			System.out.println("비어있는 내용이 있습니다.");
 			response.sendRedirect("/board/insert");
-//		} else if(!request.getSession().getAttribute("sessionId").equals(writer_)) {
-//			System.out.println("아이디가 다릅니다.");
-//			response.sendRedirect("/board/insert");
 		}
 		else {
 			BoardDao bd = new BoardDao();
