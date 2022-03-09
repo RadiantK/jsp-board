@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.radiantk.board.Entity.User;
 import com.radiantk.board.dao.UserDao;
-import com.radiantk.board.entity.User;
 
 @SuppressWarnings("serial")
 @WebServlet("/board/join")
