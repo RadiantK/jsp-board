@@ -11,6 +11,13 @@
 ## MySQL 데이터베이스 생성
 - 데이터베이스와 사용자도 새로 생성을 해서 사용했습니다.<br/>
 
+- 유저 생성
+```sql
+	CREATE USER 'board'@'localhost' identified by 'board';
+	GRANT ALL PRIVILEGES ON *.* TO 'board'@'localhost';
+	flush PRIVILEGES;
+```
+
 - 게시판
 ```sql
 CREATE TABLE BOARD (
@@ -25,7 +32,7 @@ CREATE TABLE BOARD (
 );
 ```
 
-- 유저<br/>
+- 유저
 ```sql
 CREATE TABLE USERS (
 	USERID VARCHAR(20) NOT NULL UNIQUE, -- 회원 아이디
@@ -69,7 +76,7 @@ CREATE TABLE USERS (
 1. Dao : 데이터 베이스 접근 객체
 1. Entity : 데이터 베이스 속성값
 1. Filter : 인코딩 필터(UTF-8지정)
-1. Util : DB에 연결객체를 따로 생성
+1. Util : DB와의 연결을 위한 Connection객체를 따로 클래스로 
 
 - WEPAPP<br/>
 1. board폴더 : JSP 구성 파일
