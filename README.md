@@ -76,7 +76,7 @@ CREATE TABLE USERS (
 1. Dao : 데이터 베이스 접근 객체
 1. Entity : 데이터 베이스 속성값
 1. Filter : 인코딩 필터(UTF-8지정)
-1. Util : DB와의 연결을 위한 Connection객체를 따로 클래스로 
+1. Util : DB와의 연결을 위한 Connection객체를 따로 클래스로 만듬
 
 - WEPAPP<br/>
 1. board폴더 : JSP 구성 파일
