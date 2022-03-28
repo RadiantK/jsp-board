@@ -1,10 +1,10 @@
 # JSP 게시판
 
 ## 사용한 환경
-- JAVA
+- JAVA(JDK11)
 - Eclipse IDE
 - MySQL 8.27
-- tomcat 9.0
+- tomcat 9.0.56
 
 <br/>
 
