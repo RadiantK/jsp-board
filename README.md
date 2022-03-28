@@ -13,9 +13,9 @@
 
 - 유저 생성
 ```sql
-	CREATE USER 'board'@'localhost' identified by 'board';
-	GRANT ALL PRIVILEGES ON *.* TO 'board'@'localhost';
-	flush PRIVILEGES;
+// 원하는 유저명이나 비밀번호를 설정하면 됩니다.
+CREATE USER 'board'@'localhost' identified by 'board';
+GRANT ALL PRIVILEGES ON *.* TO 'board'@'localhost';
 ```
 
 - 게시판
