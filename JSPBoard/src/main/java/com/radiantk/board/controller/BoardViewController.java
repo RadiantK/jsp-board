@@ -25,6 +25,6 @@ public class BoardViewController extends HttpServlet {
 		Board board = bd.detailBoard(no);
 		request.setAttribute("board", board);
 		
-		request.getRequestDispatcher("/board/view.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/board/view.jsp").forward(request, response);
 	}
 }

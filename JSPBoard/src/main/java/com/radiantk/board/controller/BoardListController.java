@@ -41,7 +41,7 @@ public class BoardListController extends HttpServlet {
 		request.setAttribute("list", list);
 		request.setAttribute("count", count);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/board/main.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/board/main.jsp");
 		rd.forward(request, response);
 	}
 }

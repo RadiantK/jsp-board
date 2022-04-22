@@ -21,6 +21,6 @@ public class LogOutController extends HttpServlet {
 		// 세션값 모두 제거
 		session.invalidate();
 		
-		response.sendRedirect("main");
+		response.sendRedirect("/board/main");
 	}
 }

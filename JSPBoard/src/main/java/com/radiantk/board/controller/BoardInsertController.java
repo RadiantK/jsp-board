@@ -18,7 +18,7 @@ public class BoardInsertController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 
-		request.getRequestDispatcher("/board/insert.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/board/insert.jsp").forward(request, response);
 	}
 	
 	@Override

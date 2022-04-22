@@ -26,7 +26,7 @@ public class BoardUpdateController extends HttpServlet{
 		
 		request.setAttribute("board", board);
 		
-		request.getRequestDispatcher("/board/update.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/board/update.jsp").forward(request, response);
 	}
 	
 	@Override

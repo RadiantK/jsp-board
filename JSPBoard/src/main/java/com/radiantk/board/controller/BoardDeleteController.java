@@ -23,6 +23,6 @@ public class BoardDeleteController extends HttpServlet{
 		BoardDao bd = new BoardDao();
 		bd.deleteBoard(no);
 		
-		response.sendRedirect("/board/main");
+		response.sendRedirect("/WEB-INF/board/main");
 	}
 }

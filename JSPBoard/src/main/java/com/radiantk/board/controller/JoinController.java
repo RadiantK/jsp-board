@@ -19,7 +19,7 @@ public class JoinController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		request.getRequestDispatcher("/board/join.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/board/join.jsp").forward(request, response);
 		
 	}
 	
@@ -46,7 +46,7 @@ public class JoinController extends HttpServlet {
 		if(userId_ == null || userId_.equals("") ||	password_ == null || password_.equals("") ||
 				email_ == null || email_.equals("") || userName_ == null || userName_.equals("")) {
 			System.out.println("비어있는 부분이 있습니다.");
-			response.sendRedirect("/board/join");
+			response.sendRedirect("/WEB-INF/board/join");
 		} else {
 			User user = new User(userId, password, userName, email);
 			
@@ -55,10 +55,10 @@ public class JoinController extends HttpServlet {
 
 			if(result == -1) {
 				System.out.println("회원가입 실패.");
-				response.sendRedirect("/board/join");
+				response.sendRedirect("/WEB-INF/board/join");
 			} else {
 				System.out.println("회원가입이 완료되었습니다.");
-				response.sendRedirect("/board/main");
+				response.sendRedirect("/WEB-INF/board/main");
 			}
 		}
 	}
