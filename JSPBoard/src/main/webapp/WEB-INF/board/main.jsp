@@ -84,8 +84,9 @@
           
           <!-- empty : 값이 널이거나 비어있는지 조사 -->
           <c:set var="page" value="${(empty param.p) ? 1 : param.p}" />
+          <!-- 1,6,11,16,21의 값을 취하기 위함 -->
           <c:set var="startNum" value="${page - ((page-1) % 5)}" />
-          <!-- subStringBefore(값, 조건) 조건의 앞의 값만 취해줌 -->
+          <!-- subStringBefore(값, 조건) 조건의 앞의 값만 취해줌 / 마지막 페이지의 값을 얻기위함-->
           <c:set var="lastNum" value="${fn:substringBefore(Math.ceil(count/5), '.')}" />
          
          <label class="hidden">현재 페이지 표시</label>
@@ -114,6 +115,7 @@
             
             
             <label class="hidden">다음페이지</label>
+            <!-- i값은 0~4이므로 +5을 해주면 1~5페이지에서 6~10페이지로 넘어갈 수있음 -->
             <c:if test="${startNum + 5 <= lastNum}">
 	            <a href="?p=${startNum +5 }&t=${param.t}&w=${param.w}" class="bt next">
 	              <span class="material-icons">keyboard_double_arrow_right</span>
