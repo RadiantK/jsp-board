@@ -47,7 +47,7 @@ public class UserDao {
 			rs = st.executeQuery();
 			
 			if(rs.next()) {
-				if(rs.getString(1).equals(password)) return 1; // 로그인 성공
+				if(rs.getString("password").equals(password)) return 1; // 로그인 성공
 			} else {
 				return 0; // 비밀번호가 일치하지 않음
 			}
